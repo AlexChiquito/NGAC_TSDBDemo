@@ -1,0 +1,16 @@
+label: event test
+rules:
+  - label: Charlie reads T2
+    event:
+      subject:
+        user: uCharlie
+      operations:
+        - read
+      target:
+        policyElements:
+          - name: oT2
+            type: O
+    response:
+      filters:
+        - data < 10
+        - test = 1
